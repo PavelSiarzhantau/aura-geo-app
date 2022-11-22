@@ -1,0 +1,41 @@
+<!-- Code Highlights
+
+-Aura components can include regular HTML markup and other Aura components or Lightning web components.
+-The force:appHostable interface means this component can be displayed in a custom tab.
+-The flexipage:availableForAllPageTypes interface means this component can be added to Lightning pages using Lightning 
+App Builder.
+-The <lightning:layout> and <lightning:layoutItem> tags define a responsive layout based on a 12-column grid system. 
+-To learn more about creating responsive layouts, refer to Mastering Salesforce Lightning Design System Grids and 
+Lightning Layouts in the Resources section of this step.
+-The <div class="slds-box slds-theme_default"> tags style the placeholder text to make it easier to see until you 
+replace it with the actual Account Search, Account List, and Account Map components later in this project. -->
+
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+    <lightning:layout horizontalAlign="space" multipleRows="true">
+        <lightning:layoutItem size="12"
+                              mediumDeviceSize="12"
+                              padding="around-small">
+            <div class="slds-box slds-theme_default">
+                <!-- Account Search goes here -->
+                <c:AccountSearch/>
+            </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="12"
+                              mediumDeviceSize="6"
+                              padding="around-small">
+            <div class="slds-box slds-theme_default">
+                <!-- Account List goes here -->
+                <c:AccountList/>
+            </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="12"
+                              mediumDeviceSize="6"
+                              padding="around-small">
+            <div class="slds-box slds-theme_default">
+                <!-- Account Map goes here -->
+                <c:AccountMap/>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>	
